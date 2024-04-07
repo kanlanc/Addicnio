@@ -1,6 +1,6 @@
 import React, { useContext, createContext } from "react";
 import { useState, useEffect, useCallback } from "react";
-import { Notion } from "@neurosity/notion";
+import { Notion } from "@neurosity/sdk";
 import useLocalStorage from "react-use/lib/useLocalStorage";
 
 export const notion = new Notion({
