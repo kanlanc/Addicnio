@@ -7,18 +7,18 @@ const SmokingUrgePage = () => {
   const [memeUrl, setMemeUrl] = useState('');
 
   useEffect(() => {
-    const subscription = subscribeToNeurosityData((data) => {
-      // Process the Neurosity data and check for cigarette smoke urge
-      if (data.cigaretteUrgeDetected) {
-        // Call the meme API to fetch a relevant meme
-        fetchMeme();
-      }
-    });
+    // const subscription = subscribeToNeurosityData((data) => {
+    //   // Process the Neurosity data and check for cigarette smoke urge
+    //   if (data.cigaretteUrgeDetected) {
+    //     // Call the meme API to fetch a relevant meme
+    //     fetchMeme();
+    //   }
+    // });
 
-    // Clean up the subscription when the component unmounts
-    return () => {
-      subscription.unsubscribe();
-    };
+    // // Clean up the subscription when the component unmounts
+    // return () => {
+    //   subscription.unsubscribe();
+    // };
   }, []);
 
   const fetchMeme = async () => {
